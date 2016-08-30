@@ -9,11 +9,12 @@ programs = [
     'qt_qhash',
     # 'python_dict',
     # 'ruby_hash',
+    'myhashmap',
 ]
 
 minkeys  =  100*1000 # 2*1000*1000
-maxkeys  = 250*1000 # 40*1000*1000
-interval =  50*1000 # 2*1000*1000
+maxkeys  = 500*1000 # 40*1000*1000
+interval =  100*1000 # 2*1000*1000
 best_out_of = 2
 
 # for the final run, use this:

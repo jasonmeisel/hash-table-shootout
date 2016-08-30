@@ -46,6 +46,7 @@ proper_names = {
     'qt_qhash': 'Qt 4.5 QHash',
     'python_dict': 'Python 2.6 (C API) dict',
     'ruby_hash': 'Ruby 1.9 (C API) Hash',
+    'myhashmap': 'Jason\'s HashMap',
 }
 
 # do them in the desired order to make the legend not overlap the chart data
@@ -59,6 +60,7 @@ program_slugs = [
     # 'ruby_hash',
     'glib_hash_table',
     'qt_qhash',
+    'myhashmap',
 ]
 
 chart_data = {}
@@ -66,11 +68,12 @@ chart_data = {}
 for i, (benchtype, programs) in enumerate(by_benchtype.items()):
     chart_data[benchtype] = []
     for j, program in enumerate(program_slugs):
-        data = programs[program]
-        chart_data[benchtype].append({
-            'label': proper_names[program],
-            'data': [],
-        })
+        if program in programs:
+            data = programs[program]
+            chart_data[benchtype].append({
+                'label': proper_names[program],
+                'data': [],
+            })
 
         for k, (nkeys, value) in enumerate(data):
             chart_data[benchtype][-1]['data'].append([nkeys, value])
