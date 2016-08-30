@@ -55,8 +55,8 @@ program_slugs = [
     'google_dense_hash_map',
     'stl_unordered_map',
     'boost_unordered_map',
-    'python_dict',
-    'ruby_hash',
+    # 'python_dict',
+    # 'ruby_hash',
     'glib_hash_table',
     'qt_qhash',
 ]

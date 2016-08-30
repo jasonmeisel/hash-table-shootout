@@ -7,13 +7,13 @@ programs = [
     'google_sparse_hash_map',
     'google_dense_hash_map',
     'qt_qhash',
-    'python_dict',
-    'ruby_hash',
+    # 'python_dict',
+    # 'ruby_hash',
 ]
 
-minkeys  =  2*1000*1000
-maxkeys  = 40*1000*1000
-interval =  2*1000*1000
+minkeys  =  100*1000 # 2*1000*1000
+maxkeys  = 250*1000 # 40*1000*1000
+interval =  50*1000 # 2*1000*1000
 best_out_of = 2
 
 # for the final run, use this:
