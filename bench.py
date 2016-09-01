@@ -12,9 +12,9 @@ programs = [
     'myhashmap',
 ]
 
-minkeys  =  100*1000
-maxkeys  =  1*1000*1000
-interval =  100*1000
+minkeys  =  500*1000
+maxkeys  =  1000*1000
+interval =  250*1000
 best_out_of = 2
 
 # for the final run, use this:
@@ -32,7 +32,7 @@ if len(sys.argv) > 1:
     benchtypes = sys.argv[1:]
 else:
     benchtypes = ('sequential', 'random', 'sequentialstring', 'randomstring')
-    # benchtypes = ('sequential', 'random', 'delete', 'sequentialstring', 'randomstring', 'deletestring')
+    benchtypes = ('sequential', 'random', 'delete', 'sequentialstring', 'randomstring', 'deletestring')
 
 for benchtype in benchtypes:
     nkeys = minkeys
