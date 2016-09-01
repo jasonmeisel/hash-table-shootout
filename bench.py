@@ -4,7 +4,7 @@ programs = [
     'glib_hash_table',
     'stl_unordered_map',
     'boost_unordered_map',
-    'google_sparse_hash_map',
+    # 'google_sparse_hash_map',
     'google_dense_hash_map',
     'qt_qhash',
     # 'python_dict',
@@ -12,9 +12,9 @@ programs = [
     'myhashmap',
 ]
 
-minkeys  =  100*1000 # 2*1000*1000
-maxkeys  = 500*1000 # 40*1000*1000
-interval =  100*1000 # 2*1000*1000
+minkeys  =  100*1000
+maxkeys  =  1*1000*1000
+interval =  100*1000
 best_out_of = 2
 
 # for the final run, use this:
@@ -31,7 +31,8 @@ outfile = open('output', 'w')
 if len(sys.argv) > 1:
     benchtypes = sys.argv[1:]
 else:
-    benchtypes = ('sequential', 'random', 'delete', 'sequentialstring', 'randomstring', 'deletestring')
+    benchtypes = ('sequential', 'random', 'sequentialstring', 'randomstring')
+    # benchtypes = ('sequential', 'random', 'delete', 'sequentialstring', 'randomstring', 'deletestring')
 
 for benchtype in benchtypes:
     nkeys = minkeys

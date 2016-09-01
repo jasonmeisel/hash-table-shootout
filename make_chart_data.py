@@ -52,7 +52,7 @@ proper_names = {
 # do them in the desired order to make the legend not overlap the chart data
 # too much
 program_slugs = [
-    'google_sparse_hash_map',
+    # 'google_sparse_hash_map',
     'google_dense_hash_map',
     'stl_unordered_map',
     'boost_unordered_map',
